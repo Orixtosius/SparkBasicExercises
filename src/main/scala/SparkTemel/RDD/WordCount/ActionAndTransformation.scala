@@ -28,7 +28,7 @@ object ActionAndTransformation {
     val infoText = sc.makeRDD(List("spark öğrenmek çok heyecan verici"))
     infoText.map(x => x.toUpperCase).foreach(println)
 
-    val instructionText = sc.textFile("C:/Users/gulte/Desktop/Scala/instruction.txt")
+    val instructionText = sc.textFile("instruction.txt")
     val row = instructionText.count()
     println(s"\nLine of text named instruction is ${row}")
     /*
