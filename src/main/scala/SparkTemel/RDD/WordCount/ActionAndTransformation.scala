@@ -28,9 +28,9 @@ object ActionAndTransformation {
     val infoText = sc.makeRDD(List("spark öğrenmek çok heyecan verici"))
     infoText.map(x => x.toUpperCase).foreach(println)
 
-    val instructionText = sc.textFile("C:/Users/gulte/Desktop/Scala/instruction.txt")
+    val instructionText = sc.textFile("instruction.txt")
     val row = instructionText.count()
-    println(s"\nLine of text named instruction is ${row}")
+    println(s"\nLine of text named instruction is $row")
     /*
     val rowSpecialized = instructionText.countByValue()
 
@@ -38,7 +38,7 @@ object ActionAndTransformation {
      */
 
     val words = instructionText.flatMap(x => x.split(" ")).count()
-    println(s"Word count of text file named instruction is ${words}\n")
+    println(s"Word count of text file named instruction is $words\n")
 
     val numberList2 = sc.makeRDD(List(1,2,3,4,5,6,7,8,9,10))
     numberList.subtract(numberList2).foreach(x => print(s"-$x"))
@@ -49,7 +49,7 @@ object ActionAndTransformation {
     println(s"\nNew List is : ${newList.collect().mkString(",")}")
 
     val frequence = numberList.countByValue()
-    println(s"\nWord count of by value from list is ${frequence}\n")
+    println(s"\nWord count of by value from list is $frequence\n")
 
   }
 

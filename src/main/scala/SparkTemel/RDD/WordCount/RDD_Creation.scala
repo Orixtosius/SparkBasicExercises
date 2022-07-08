@@ -26,7 +26,7 @@ object RDD_Creation {
     rddFromList.take(3).foreach(println)
 
     println("\nCSV'den RDD oluşturmak")
-    val rdd_from_text = sc.textFile("C:/Users/gulte/Desktop/Scala/OnlineRetail.csv")
+    val rdd_from_text = sc.textFile("OnlineRetail.csv")
     rdd_from_text.take(3).foreach(println)
   }
 }
