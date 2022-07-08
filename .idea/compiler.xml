@@ -9,5 +9,8 @@
         <module name="wordCounter_v2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SparkWithScala" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
